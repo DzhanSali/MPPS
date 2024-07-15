@@ -14,9 +14,10 @@ def find_duplicates(folder):
 
 # Usage of normpath: without it an error is thrown related to 
 # mixed usage of forward and backward slashes in the file path on a Windows system 
-# such as: "C:/Users/Lenovo Y510P/Music/Metal\\ACDC - Kick You When You're Down (128 kbps)-1.mp3" due to the usage of send2trash
+# such as: "C:/Users/root/Music/Metal\\ACDC - Kick You When You're Down (128 kbps)-1.mp3" due to the usage of send2trash
 def main():
-    folder = 'C:/Users/Lenovo Y510P/Music/Metal'
+    # Remember: if you combine Python and Windows, you need to use forward slashes
+    folder = 'your/directory/with/music/goes/here'
     folder = os.path.normpath(folder)
     duplicates = find_duplicates(folder)
     acc = 0
